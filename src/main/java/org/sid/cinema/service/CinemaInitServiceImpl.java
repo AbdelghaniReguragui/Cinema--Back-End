@@ -126,7 +126,7 @@ public class CinemaInitServiceImpl implements ICinemaInitService{
     public void initFilms() {
         double[] durees = new double[] {1, 1.5, 2, 2.5};
         List<Categorie> categorieList = categorieRepository.findAll();
-        Stream.of("Green Street Hooligans","", "Dictator", "parrain").forEach(nameFilm -> {
+        Stream.of("Green Street Hooligans","Dictator", "12 hommes en colere", "parrain").forEach(nameFilm -> {
             Film film = new Film();
             film.setDuree(durees[new Random().nextInt(durees.length)]);
             film.setTitre(nameFilm);
